@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Pacifico&family=Satisfy&display=swap");
 
 /* common styles  */
-body {
+body,
+h1,
+p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,21 +13,29 @@ body {
 }
 
 .wrapper {
-  max-width: 80%;
+  max-width: 75%;
   margin-inline: auto;
 }
 :root {
   --primary-color: #e6533c;
   --text-primary-color: #fff;
 }
+.primary-btn {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 42px;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
 /* navbar styles  */
 header {
   background: linear-gradient(
     180deg,
     rgba(17, 17, 17, 1),
-    rgba(119, 119, 119, 0.684)
+    rgba(17, 17, 17, 0.85)
   );
-  height: 500px;
 }
 nav {
   display: flex;
@@ -40,7 +51,7 @@ nav {
 .nav-links {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 39px;
-  padding: 6px;
+  padding: 8px;
 }
 li {
   list-style: none;
@@ -58,14 +69,65 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 .menu-icon {
   display: none;
   color: #fff;
   font-size: 1.5rem;
 }
-
+/* banner styles  */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.banner-left h1 {
+  font-size: 4.2rem;
+  font-weight: 900;
+}
+.banner-left h1 span {
+  font-style: italic;
+  font-family: "Satisfy", "cursive";
+  font-weight: 400;
+  line-height: 5.5rem;
+}
+.banner-left p {
+  color: rgba(255, 255, 255, 0.5);
+  margin-block: 30px;
+  max-width: 520px;
+  line-height: 1.5rem;
+}
+.btn-grp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.btn-grp button:nth-child(2) {
+  background: transparent;
+  border: 1px solid white;
+}
+.banner-right {
+  position: relative;
+}
+.banner-right img {
+  display: block;
+}
+.video-tutorial {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  bottom: 50px;
+  left: -50px;
+}
+.video-tutorial span {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 100%;
+}
 /* styles for small device  */
 @media only screen and (max-width: 576px) {
   .wrapper {
