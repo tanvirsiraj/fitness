@@ -119,25 +119,116 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
-  bottom: 50px;
-  left: -50px;
+  bottom: 60px;
+  left: -90px;
+  background-color: rgba(48, 48, 48, 0.54);
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
 }
-.video-tutorial span {
+
+.video-tutorial .circle {
   width: 40px;
   height: 40px;
   background: var(--primary-color);
   border-radius: 100%;
+}
+.video-tutorial span:first-child,
+.video-tutorial-2 span:first-child {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.video-tutorial span:last-child,
+.video-tutorial-2 span:last-child {
+  display: inline-block;
+  margin-top: 5px;
+}
+.video-tutorial-2 {
+  position: absolute;
+  top: 160px;
+  right: -40px;
+  background-color: rgba(48, 48, 48, 0.54);
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+.video-tutorial-2 div span:first-child {
+  font-size: 40px;
 }
 /* styles for small device  */
 @media only screen and (max-width: 576px) {
   .wrapper {
     max-width: 92%;
   }
+
   .nav-links {
     display: none;
   }
   .menu-icon {
     display: block;
+  }
+  .btn-grp {
+    justify-content: center;
+  }
+  .banner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .banner-left h1 {
+    font-size: 2.2rem;
+  }
+  .banner-left h1 span {
+    line-height: 2.5rem;
+  }
+  .banner-left p {
+    max-width: 280px;
+  }
+  .banner-right img {
+    width: 100%;
+  }
+  .btn-grp {
+    display: flex;
+    gap: 12px;
+  }
+  .primary-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+  .btn-grp {
+    gap: 8px;
+  }
+
+  .video-tutorial {
+    gap: 10px;
+    bottom: 200px;
+    left: 20px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .video-tutorial .circle {
+    width: 30px;
+    height: 30px;
+  }
+  .video-tutorial span:first-child,
+  .video-tutorial-2 span:first-child {
+    font-size: 18px;
+  }
+
+  .video-tutorial-2 {
+    top: 40px;
+    right: 20px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .video-tutorial-2 div span:first-child {
+    font-size: 20px;
+  }
+  .video-tutorial-2 div span:last-child {
+    font-size: 9px;
   }
 }
 
@@ -145,5 +236,19 @@ a {
 @media (min-width: 576px) and (max-width: 992px) {
   .wrapper {
     max-width: 92%;
+  }
+  .banner {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .video-tutorial {
+    bottom: 100px;
+    left: -25px;
+  }
+
+  .video-tutorial-2 {
+    top: 40px;
+    right: -30px;
   }
 }
