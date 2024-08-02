@@ -33,7 +33,7 @@ main {
   background-color: #000;
 }
 section {
-  padding-block: 100px;
+  padding-top: 100px;
 }
 .sec {
   text-align: center;
@@ -207,13 +207,33 @@ a {
   margin: 0;
   margin-inline: auto;
 }
+/* run section  */
+.run-container {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(34, 34, 34, 1);
+  padding: 20px;
+  border-radius: 20px;
+}
+.run-container .sec {
+  text-align: left;
+}
+.run-container .sec .section-description {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.run-container img {
+  width: 366px;
+  height: 312px;
+  border-radius: 12px;
+}
 /* styles for small device  */
 @media only screen and (max-width: 576px) {
   .wrapper {
     max-width: 92%;
   }
   section {
-    padding-block: 50px;
+    padding-top: 50px;
   }
   .nav-links {
     display: none;
