@@ -4,7 +4,9 @@
 /* common styles  */
 body,
 h1,
-p {
+p,
+img,
+div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,6 +17,9 @@ p {
 .wrapper {
   max-width: 65%;
   margin-inline: auto;
+}
+img {
+  width: 100%;
 }
 :root {
   --primary-color: #e6533c;
@@ -300,6 +305,35 @@ input {
 .calculate-btn {
   margin-top: 30px;
 }
+
+/* exercise section  */
+.exercise-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  color: white;
+}
+.exercise-content {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-text-content div:nth-child(2) {
+  margin-top: 30px;
+  justify-content: flex-end;
+}
+.exercise-content img {
+  border-radius: 8px;
+  height: 240px;
+}
+.exercise-content .primary-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
 /* team section  */
 .team-container {
   background: rgba(255, 255, 255, 0.1);
@@ -413,6 +447,7 @@ input {
   .banner {
     flex-direction: column;
     gap: 40px;
+    align-items: baseline;
   }
 
   .banner-left h1 {
@@ -518,6 +553,12 @@ input {
   .input-group input {
     width: 100%;
   }
+
+  /* exercise section  */
+  .exercise-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   /* footer styles  */
 
   .footer-container {
